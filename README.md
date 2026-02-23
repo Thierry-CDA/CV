@@ -10,9 +10,11 @@ L’objectif était de structurer l’information de manière claire et hiérarc
 
 - Structuration HTML sémantique
 - Mise en page responsive
+- Configuration Tailwind personnalisée
 - Organisation claire des sections
 - Déploiement via GitHub Pages
 - Gestion versioning avec Git
+- Structuration HTML sémantique
 
 ## Stack utilisée
 
