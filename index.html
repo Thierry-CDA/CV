@@ -523,6 +523,48 @@
         }
 
         @media screen and (max-width: 767px) {
+            .cv-grid {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .cv-layout__left-top,
+            .cv-layout__right-top,
+            .cv-layout__left-bottom,
+            .cv-layout__right-bottom {
+                display: contents !important;
+            }
+
+            #card-projet {
+                order: 1 !important;
+                flex: none !important;
+                height: auto !important;
+            }
+
+            #card-exp {
+                order: 2 !important;
+                flex: none !important;
+                height: auto !important;
+            }
+
+            #card-form {
+                order: 3 !important;
+                flex: none !important;
+                height: auto !important;
+            }
+
+            #card-soft {
+                order: 4 !important;
+                flex: none !important;
+                height: auto !important;
+            }
+
+            #card-hard {
+                order: 5 !important;
+                flex: none !important;
+                height: auto !important;
+            }
+
             .en-tete-carte {
                 display: flex !important;
                 flex-direction: column-reverse !important;
@@ -630,13 +672,13 @@
             <!-- Row 1, Left: Projet pro + Soft skills -->
             <div class="cv-layout__left-top lg:col-span-4 lg:row-start-1 flex flex-col gap-4">
                 <!-- Section: Projet professionnel -->
-                <div class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless">
+                <div id="card-projet"
+                    class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless">
                     <div class="h-1.5 bg-primary"></div>
                     <div class="p-6">
                         <div class="cv-card__heading flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary" aria-hidden="true">badge</span>
-                            <h3 class="titre-section">Projet professionnel
-                            </h3>
+                            <h3 class="titre-section">Projet professionnel</h3>
                         </div>
 
                         <div class="bg-soft border border-primary/10 rounded-xl p-4">
@@ -680,7 +722,7 @@
                 </div>
 
                 <!-- Section: Soft skills -->
-                <div
+                <div id="card-soft"
                     class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless flex-1 flex flex-col">
                     <div class="h-1.5 bg-primary/80"></div>
                     <div class="p-4 flex-1 flex flex-col">
@@ -693,32 +735,23 @@
                         <div id="soft-skills-list"
                             class="flex flex-wrap content-start gap-2 text-xs font-semibold text-slate-700 flex-1">
                             <span class="badge-soft-skill">Rigueur</span>
-                            <span class="badge-soft-skill">Esprit
-                                d'analyse</span>
-                            <span class="badge-soft-skill">Résolution
-                                de problèmes</span>
+                            <span class="badge-soft-skill">Esprit d'analyse</span>
+                            <span class="badge-soft-skill">Résolution de problèmes</span>
                             <span class="badge-soft-skill">Organisation</span>
                             <span class="badge-soft-skill">Priorisation</span>
                             <span class="badge-soft-skill">Communication</span>
-                            <span class="badge-soft-skill">Relation
-                                client</span>
-                            <span class="badge-soft-skill">Sens
-                                de l'écoute</span>
-                            <span class="badge-soft-skill">Travail
-                                collaboratif</span>
-                            <span class="badge-soft-skill">Conduite
-                                du changement</span>
-                            <span class="badge-soft-skill">Ingénierie
-                                pédagogique</span>
+                            <span class="badge-soft-skill">Relation client</span>
+                            <span class="badge-soft-skill">Sens de l'écoute</span>
+                            <span class="badge-soft-skill">Travail collaboratif</span>
+                            <span class="badge-soft-skill">Conduite du changement</span>
+                            <span class="badge-soft-skill">Ingénierie pédagogique</span>
                             <span class="badge-soft-skill">Autonomie</span>
                             <span class="badge-soft-skill">Adaptabilité</span>
-                            <span class="badge-soft-skill">Sens du
-                                résultat</span>
+                            <span class="badge-soft-skill">Sens du résultat</span>
                             <span class="badge-soft-skill">Empathie</span>
                             <span class="badge-soft-skill">Curiosité</span>
                             <span class="badge-soft-skill">Créativité</span>
-                            <span class="badge-soft-skill">Esprit
-                                de synthèse</span>
+                            <span class="badge-soft-skill">Esprit de synthèse</span>
                         </div>
                     </div>
                 </div>
@@ -727,15 +760,14 @@
             <!-- Row 1, Right: Expérience professionnelle -->
             <div class="cv-layout__right-top cv-right lg:col-span-8 lg:row-start-1 h-full">
                 <!-- Section: Expérience professionnelle -->
-                <div class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless h-full">
+                <div id="card-exp"
+                    class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless h-full">
                     <div class="h-1.5 bg-primary"></div>
                     <div class="p-6">
                         <div class="cv-card__heading flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-accent bg-slateDark p-1 rounded"
                                 aria-hidden="true">work_history</span>
-                            <h2 class="titre-section">Expérience
-                                professionnelle
-                            </h2>
+                            <h2 class="titre-section">Expérience professionnelle</h2>
                         </div>
 
                         <div class="liste-experiences">
@@ -937,7 +969,7 @@
 
             <!-- Row 2, Left: Compétences techniques -->
             <div class="cv-layout__left-bottom cv-left lg:col-span-4 lg:row-start-2 h-full">
-                <div
+                <div id="card-hard"
                     class="cv-card bg-gradient-to-br from-[#1a1e1f] via-[#2d3436] to-[#3e4648] text-white rounded-2xl border border-white/10 overflow-hidden print-shadowless h-full shadow-lg">
                     <div class="p-6">
                         <div class="cv-card__heading flex items-center gap-3 mb-6">
@@ -951,16 +983,11 @@
                                     &amp;
                                     Microsoft 365</p>
                                 <div class="flex flex-wrap gap-3">
-                                    <span class="badge-hard-skill">Power
-                                        Apps (Canvas)</span>
-                                    <span class="badge-hard-skill">Power
-                                        Automate</span>
-                                    <span class="badge-hard-skill">SharePoint
-                                        Online</span>
-                                    <span class="badge-hard-skill">Microsoft
-                                        365</span>
-                                    <span class="badge-hard-skill">Microsoft
-                                        Forms</span>
+                                    <span class="badge-hard-skill">Power Apps (Canvas)</span>
+                                    <span class="badge-hard-skill">Power Automate</span>
+                                    <span class="badge-hard-skill">SharePoint Online</span>
+                                    <span class="badge-hard-skill">Microsoft 365</span>
+                                    <span class="badge-hard-skill">Microsoft Forms</span>
                                 </div>
                             </div>
 
@@ -968,14 +995,10 @@
                                 <p class="text-xs uppercase tracking-wider text-slate-300 font-semibold mb-2">Conception
                                     &amp; cycle projet</p>
                                 <div class="flex flex-wrap gap-3">
-                                    <span class="badge-hard-skill">Analyse
-                                        des besoins</span>
-                                    <span class="badge-hard-skill">Modélisation
-                                        processus</span>
-                                    <span class="badge-hard-skill">Recette
-                                        / tests</span>
-                                    <span class="badge-hard-skill">Support
-                                        &amp; adoption</span>
+                                    <span class="badge-hard-skill">Analyse des besoins</span>
+                                    <span class="badge-hard-skill">Modélisation processus</span>
+                                    <span class="badge-hard-skill">Recette / tests</span>
+                                    <span class="badge-hard-skill">Support &amp; adoption</span>
                                     <span class="badge-hard-skill">Documentation</span>
                                 </div>
                             </div>
@@ -989,8 +1012,7 @@
                                     <span class="badge-hard-skill">Bootstrap</span>
                                     <span class="badge-hard-skill">JavaScript</span>
                                     <span class="badge-hard-skill">Git</span>
-                                    <span class="badge-hard-skill">UX
-                                        / UI Design</span>
+                                    <span class="badge-hard-skill">UX / UI Design</span>
                                     <span class="badge-hard-skill">Responsive</span>
                                     <span class="badge-hard-skill">GitHub</span>
                                     <span class="badge-hard-skill">WordPress</span>
@@ -1003,7 +1025,8 @@
 
             <!-- Row 2, Right: Formation -->
             <div class="cv-layout__right-bottom cv-right lg:col-span-8 lg:row-start-2 h-full">
-                <div class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless h-full">
+                <div id="card-form"
+                    class="cv-card bg-card rounded-2xl border border-border overflow-hidden print-shadowless h-full">
                     <div class="h-1.5 bg-primary"></div>
                     <div class="p-6">
                         <div class="cv-card__heading flex items-center gap-3 mb-4">
