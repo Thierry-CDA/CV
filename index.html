@@ -532,10 +532,10 @@
         <!-- Header (print-friendly, no buttons) -->
         <section
             class="cv-header bg-gradient-to-br from-[#1a1e1f] via-[#2d3436] to-[#3e4648] text-white rounded-2xl overflow-hidden print-shadowless flex flex-col relative w-full border border-white/10 shadow-2xl">
-            <div class="cv-header__row flex flex-row h-64 w-full">
+            <div class="cv-header__row flex flex-col md:flex-row h-auto md:h-64 w-full">
                 <!-- Left: Name & Contact -->
                 <div
-                    class="cv-header__left pl-2 pr-1 py-4 sm:p-6 md:p-8 w-[37%] md:w-[33%] lg:w-[calc((100%-16px)/3)] shrink-0 flex flex-col justify-center items-start text-left gap-4 sm:gap-6">
+                    class="cv-header__left p-6 md:p-8 w-full md:w-[33%] lg:w-[calc((100%-16px)/3)] shrink-0 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4 sm:gap-6">
                     <div>
                         <h1
                             class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black tracking-tight leading-none text-white whitespace-nowrap">
@@ -543,17 +543,17 @@
                         </h1>
                     </div>
                     <div class="flex flex-col gap-1 text-[13px] md:text-base text-slate-300 font-medium font-mono">
-                        <div class="flex items-center justify-start gap-1 md:gap-2">
+                        <div class="flex items-center justify-center md:justify-start gap-1 md:gap-2">
                             <span class="material-symbols-outlined text-accent text-[12px] md:text-[18px]"
                                 aria-hidden="true">location_on</span>
                             <span>95800 Cergy-le-Haut</span>
                         </div>
-                        <div class="flex items-center justify-start gap-1 md:gap-2">
+                        <div class="flex items-center justify-center md:justify-start gap-1 md:gap-2">
                             <span class="material-symbols-outlined text-accent text-[12px] md:text-[18px]"
                                 aria-hidden="true">phone</span>
                             <span>07 68 04 28 68</span>
                         </div>
-                        <div class="flex items-center justify-start gap-1 md:gap-2">
+                        <div class="flex items-center justify-center md:justify-start gap-1 md:gap-2">
                             <span class="material-symbols-outlined text-accent text-[12px] md:text-[18px]"
                                 aria-hidden="true">mail</span>
                             <span>thierry-guerin@live.fr</span>
@@ -562,14 +562,14 @@
                 </div>
 
                 <!-- Separator (Double Dotted, Centered) -->
-                <div class="cv-header__sep flex flex-row justify-center items-center gap-1 w-4 shrink-0 py-6">
+                <div class="cv-header__sep hidden md:flex flex-row justify-center items-center gap-1 w-4 shrink-0 py-6">
                     <div class="h-full border-r-[2px] border-dotted border-white/20"></div>
                     <div class="h-full border-r-[2px] border-dotted border-white/20"></div>
                 </div>
 
                 <!-- Right: Title & Desc -->
                 <div
-                    class="cv-header__right p-6 md:p-8 w-full flex-1 flex flex-col justify-center items-center text-center relative">
+                    class="cv-header__right px-4 pb-8 pt-2 md:p-8 w-full flex-1 flex flex-col justify-center items-center text-center relative">
                     <div class="mb-4">
                         <span
                             class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 w-fit text-sm font-mono tracking-wider text-accent uppercase">
