@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Thierry GUERIN - CV Développeur Low-Code</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1f5c4c',
+                        accent: '#2F8F6B',
+                        slateDark: '#2D3436',
+                        bg: '#f6f8f7',
+                        card: '#ffffff',
+                        border: '#e5e7eb',
+                        soft: '#E7F3EE',
+                        text: '#2E2E2E'
+                    },
+                    fontFamily: {
+                        display: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* COMPONENTS */
+        .icone-check { color: #1f5c4c; font-size: 1rem; line-height: 1.5rem; margin-top: 0.125rem; }
+        .badge-date { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; line-height: 1rem; color: #64748b; background-color: #f1f5f9; padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid #e2e8f0; display: inline-block; }
+        .badge-soft-skill { background-color: #E7F3EE; color: #1f5c4c; padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(31, 92, 76, 0.2); }
+        .badge-hard-skill { font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; line-height: 1.25rem; background-color: rgba(255, 255, 255, 0.1); padding: 0.375rem 0.75rem; border-radius: 0.25rem; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .carte-experience { border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.25rem; }
+        .carte-formation { border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1rem; }
+        .titre-poste { font-size: 1.125rem; line-height: 1.75rem; font-weight: 700; color: #2D3436; }
+        .titre-section { font-size: 1.25rem; line-height: 1.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.025em; color: #1f5c4c; }
+
+        /* BASE */
+        @page { size: A4; margin: 8mm 10mm; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+        /* PRINT */
+        @media print {
+            html { zoom: 0.66; }
+            .no-print { display: none !important; }
+            .cv-header { border-radius: 8px !important; display: flex !important; flex-direction: column !important; }
+            .cv-header__row { display: flex !important; flex-direction: row !important; align-items: stretch !important; gap: 0 !important; }
+            .cv-header__left { width: calc((100% - 16px) / 3) !important; padding: 16px !important; }
+            .cv-header__sep { display: flex !important; width: 16px !important; opacity: 1 !important; }
+            .cv-header__right { flex: 1 !important; padding: 16px !important; text-align: center !important; }
+            .cv-grid { display: grid !important; grid-template-columns: repeat(12, 1fr) !important; gap: 8px !important; }
+            .cv-card { border-radius: 7px !important; break-inside: avoid !important; }
+            .titre-section { font-size: 12pt !important; margin-bottom: 3px !important; }
+            .titre-poste { font-size: 9pt !important; margin-bottom: 2px !important; }
+        }
+    </style>
+</head>
+<body class="bg-bg font-display antialiased text-text">
+    <main class="max-w-7xl mx-auto py-8 px-4">
+        <!-- Header -->
+        <section class="cv-header bg-gradient-to-br from-[#1a1e1f] via-[#2d3436] to-[#3e4648] text-white rounded-2xl overflow-hidden flex flex-col relative w-full border border-white/10 shadow-2xl">
+            <div class="cv-header__row flex flex-row h-64 w-full">
+                <div class="cv-header__left p-8 w-[33%] shrink-0 flex flex-col justify-center items-start text-left gap-6">
+                    <h1 class="text-4xl font-black tracking-tight leading-none">Thierry GUERIN</h1>
+                    <div class="flex flex-col gap-2 text-base text-slate-300 font-mono">
+                        <span>📍 95800 Cergy-le-Haut</span>
+                        <span>📞 07 68 04 28 68</span>
+                        <span>✉️ thierry-guerin@live.fr</span>
+                    </div>
+                </div>
+                <div class="cv-header__sep flex flex-row justify-center items-center gap-1 w-4 shrink-0 py-6">
+                    <div class="h-full border-r-2 border-dotted border-white/20"></div>
+                </div>
+                <div class="cv-header__right p-8 w-full flex-1 flex flex-col justify-center items-center text-center">
+                    <h2 class="text-3xl font-mono text-accent font-bold mb-4">&lt;Développeur Low-Code&gt;</h2>
+                    <p class="text-slate-200 text-sm font-light max-w-xl">Spécialiste Microsoft Power Platform. Conception d'applications métier et automatisation de processus.</p>
+                </div>
+            </div>
+            <div class="cv-header__bar h-1.5 bg-accent w-full"></div>
+        </section>
+
+        <!-- Content -->
+        <section class="cv-grid grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4">
+            <div class="lg:col-span-4 flex flex-col gap-4">
+                <div class="cv-card bg-card rounded-2xl border border-border p-6">
+                    <h3 class="titre-section mb-4">Projet professionnel</h3>
+                    <p class="text-sm text-slate-700">En reconversion professionnelle, je souhaite renforcer mon socle technique via le titre Concepteur Développeur d'Applications.</p>
+                </div>
+                <div class="cv-card bg-card rounded-2xl border border-border p-6 flex-1">
+                    <h3 class="titre-section mb-4">Soft skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge-soft-skill">Rigueur</span>
+                        <span class="badge-soft-skill">Esprit d'analyse</span>
+                        <span class="badge-soft-skill">Organisation</span>
+                        <span class="badge-soft-skill">Communication</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 flex flex-col gap-4">
+                <div class="cv-card bg-card rounded-2xl border border-border p-6">
+                    <h2 class="titre-section mb-4">Expérience professionnelle</h2>
+                    <div class="space-y-6">
+                        <div class="carte-experience">
+                            <div class="flex justify-between items-start">
+                                <h3 class="titre-poste">Consultant Technico-Fonctionnel</h3>
+                                <span class="badge-date">2022 - 2024</span>
+                            </div>
+                            <p class="text-sm font-semibold text-slate-500">Keyrus - Alternance</p>
+                            <ul class="mt-2 space-y-1 text-sm text-slate-600">
+                                <li>• Conception d'applications Power Apps</li>
+                                <li>• Automatisation Power Automate</li>
+                                <li>• Gestion documentaire SharePoint</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
