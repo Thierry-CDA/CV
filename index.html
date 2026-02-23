@@ -515,10 +515,35 @@
         }
 
 
-        /* ── MOBILE : Titres centrés ── */
+        /* ── MOBILE : Titres et Layout ── */
         @media screen and (max-width: 1023px) {
             .cv-card__heading {
                 justify-content: center !important;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .en-tete-carte {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+                gap: 0.5rem !important;
+            }
+
+            .en-tete-carte .text-right {
+                text-align: left !important;
+            }
+
+            .titre-poste,
+            .en-tete-carte h3 {
+                font-size: 1rem !important;
+                line-height: 1.4rem !important;
+            }
+
+            .sous-titre-poste,
+            .en-tete-carte p.text-slate-600 {
+                font-size: 0.8125rem !important;
+                /* 13px */
+                line-height: 1.25rem !important;
             }
         }
     </style>
@@ -572,17 +597,17 @@
                     class="cv-header__right px-4 pb-8 pt-2 md:p-8 w-full flex-1 flex flex-col justify-center items-center text-center relative">
                     <div class="mb-4">
                         <span
-                            class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 w-fit text-sm font-mono tracking-wider text-accent uppercase">
-                            <span class="w-2.5 h-2.5 rounded-full bg-accent"></span>
+                            class="inline-flex items-center gap-2 px-4 md:px-5 py-1.5 md:py-2 rounded-full bg-white/10 border border-white/20 w-fit text-xs md:text-sm font-mono tracking-wider text-accent uppercase">
+                            <span class="w-2 md:w-2.5 h-2 md:h-2.5 rounded-full bg-accent"></span>
                             Candidature TP CDA • Low-code
                         </span>
                     </div>
 
-                    <h2 class="text-2xl md:text-3xl font-mono text-accent font-bold mb-4">
+                    <h2 class="text-xl md:text-3xl font-mono text-accent font-bold mb-3 md:mb-4">
                         &lt;Développeur Low-Code/&gt;
                     </h2>
 
-                    <p class="text-slate-200 text-sm font-light leading-relaxed max-w-xl">
+                    <p class="text-slate-200 text-[13px] md:text-sm font-light leading-relaxed max-w-xl">
                         Spécialiste Microsoft Power Platform • Conception d'applications métier et automatisation de
                         processus (Power Apps / Power Automate / SharePoint Online).
                     </p>
